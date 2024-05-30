@@ -14,11 +14,4 @@ class LaravelInfobipSmsServiceProvider extends PackageServiceProvider
             ->name('laravel-infobip-sms')
             ->hasConfigFile();
     }
-
-    public function register(): void
-    {
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/infobip-sms.php', 'infobip-sms'
-        );
-    }
 }

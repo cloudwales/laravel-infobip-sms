@@ -47,13 +47,16 @@ return $response->send('0123456789', 'Test message');
 composer test
 ```
 
+## Upcoming
+
+To be added:
+- WhatsApp messaging
+
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 

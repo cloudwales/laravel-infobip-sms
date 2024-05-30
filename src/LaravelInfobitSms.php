@@ -2,6 +2,8 @@
 
 namespace CloudWales\LaravelInfobitSms;
 
+use Illuminate\Support\Facades\Http;
+
 class LaravelInfobitSms
 {
     private mixed $username;

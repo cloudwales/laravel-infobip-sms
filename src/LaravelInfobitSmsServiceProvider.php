@@ -18,7 +18,6 @@ class LaravelInfobitSmsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-infobit-sms')
-            ->hasConfigFile()
-            ->hasCommand(LaravelInfobitSmsCommand::class);
+            ->hasConfigFile();
     }
 }

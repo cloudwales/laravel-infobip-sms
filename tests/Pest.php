@@ -1,5 +1,5 @@
 <?php
 
-use CloudWales\LaravelInfobitSms\Tests\TestCase;
+use CloudWales\LaravelInfobipSms\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

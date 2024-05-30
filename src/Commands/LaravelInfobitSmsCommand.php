@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace CloudWales\LaravelInfobitSms\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelInfobitSmsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-infobit-sms';
 
     public $description = 'My command';
 

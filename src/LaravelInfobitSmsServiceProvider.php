@@ -1,12 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace CloudWales\LaravelInfobitSms;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use CloudWales\LaravelInfobitSms\Commands\LaravelInfobitSmsCommand;
+use Illuminate\Support\Facades\Http;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LaravelInfobitSmsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +17,8 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('laravel-infobit-sms')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasCommand(LaravelInfobitSmsCommand::class);
     }
 }

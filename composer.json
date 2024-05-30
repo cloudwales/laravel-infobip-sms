@@ -1,6 +1,6 @@
 {
     "name": "cloudwal/laravel-infobip-sms",
-    "description": "Sends SMS messages through the InfoBip System",
+    "description": "Sends SMS messages through the InfoBip V3 Api",
     "keywords": [
         "CloudWales",
         "laravel",
@@ -30,13 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "CloudWales\\LaravelInfobitSms\\": "src/",
-            "CloudWales\\LaravelInfobitSms\\Database\\Factories\\": "database/factories/"
+            "CloudWales\\LaravelInfobipSms\\": "src/",
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CloudWales\\LaravelInfobitSms\\Tests\\": "tests/",
+            "CloudWales\\LaravelInfobipSms\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },

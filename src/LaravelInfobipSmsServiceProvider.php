@@ -4,7 +4,6 @@ namespace CloudWales\LaravelInfobipSms;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CloudWales\LaravelInfobitSms\Commands\LaravelInfobipSmsCommand;
 use Illuminate\Support\Facades\Http;
 
 class LaravelInfobipSmsServiceProvider extends PackageServiceProvider

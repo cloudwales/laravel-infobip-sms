@@ -11,6 +11,6 @@ class LaravelInfobipSms extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \CloudWales\LaravelInfobipSms\LaravelInfobipSms::class;
+        return \CloudWales\LaravelInfobitSms\LaravelInfobipSms::class;
     }
 }

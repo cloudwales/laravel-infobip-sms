@@ -71,7 +71,7 @@
                 "CloudWales\\LaravelInfobipSms\\LaravelInfobipSmsServiceProvider"
             ],
             "aliases": {
-                "LaravelInfobipSms": "CloudWales\\LaravelInfobipSms\\Facades\\LaravelInfobitSms"
+                "LaravelInfobipSms": "CloudWales\\LaravelInfobipSms\\Facades\\LaravelInfobipSms"
             }
         }
     },

@@ -1,9 +1,7 @@
 # Sends SMS messages through the InfoBip V3 API
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/cloudwal/laravel-infobip-sms.svg?
-style=flat-square)](https://packagist.org/packages/cloudwal/laravel-infobip-sms)
-[![run-tests](https://github.com/cloudwales/laravel-infobit-sms/actions/workflows/run-tests.yml/badge.svg?
-branch=main)](https://github.com/cloudwales/laravel-infobip-sms/actions/workflows/run-tests.yml)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/cloudwal/laravel-infobip-sms.svg? style=flat-square)](https://packagist.org/packages/cloudwal/laravel-infobip-sms)
+[![run-tests](https://github.com/cloudwales/laravel-infobit-sms/actions/workflows/run-tests.yml/badge.svg? branch=main)](https://github.com/cloudwales/laravel-infobip-sms/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/cloudwal/laravel-infobip-sms.svg?style=flat-square)]
 (https://packagist.org/packages/cloudwal/laravel-infobip-sms)
 

@@ -1,6 +1,7 @@
 # Sends SMS messages through the InfoBit System
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cloudwal/laravel-infobit-sms.svg?style=flat-square)](https://packagist.org/packages/cloudwal/laravel-infobit-sms)
+[![run-tests](https://github.com/cloudwales/laravel-infobit-sms/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/cloudwales/laravel-infobit-sms/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/cloudwal/laravel-infobit-sms.svg?style=flat-square)](https://packagist.org/packages/cloudwal/laravel-infobit-sms)
 
 This is a very simple package to send sms messages through the InfoBip API.

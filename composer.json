@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CloudWales\\LaravelInfobipSms\\": "src/",
+            "CloudWales\\LaravelInfobipSms\\": "src/"
         }
     },
     "autoload-dev": {

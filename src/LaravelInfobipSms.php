@@ -1,10 +1,10 @@
 <?php
 
-namespace CloudWales\LaravelInfobitSms;
+namespace CloudWales\LaravelInfobipSms;
 
 use Illuminate\Support\Facades\Http;
 
-class LaravelInfobitSms
+class LaravelInfobipSms
 {
     private mixed $username;
     private mixed $password;
@@ -13,14 +13,16 @@ class LaravelInfobitSms
 
     public function __construct()
     {
-        $this->username = config('infobit-sms.username');
-        $this->password = config('infobit-sms.password');
-        $this->url = config('infobit-sms.url');
-        $this->sender = config('infobit-sms.sender');
+        $this->username = config('infobip-sms.username');
+        $this->password = config('infobip-sms.password');
+        $this->url = config('infobip-sms.url');
+        $this->sender = config('infobip-sms.sender');
     }
 
-    public function send($recipient, $message)
+    public function send($recipients, $message)
     {
+        $collection = $this->prepareNumbers($recipients);
+
         $response = Http::withBasicAuth(
             $this->username,
             $this->password
@@ -32,15 +34,22 @@ class LaravelInfobitSms
             ->post($this->url.'/sms/3/messages', [
                 "messages" => [
                     "sender" => $this->sender,
-                    "destinations" => [
-                        "to" => $recipient,
-                    ],
+                    "destinations" => $collection,
                     "content" => [
                         "text" => $message
                     ]
                 ]
             ]);
 
+        $response->throw();
+
         return $response->json();
+    }
+
+    private function prepareNumbers($recipients): array
+    {
+        return collect($recipients)
+            ->mapWithKeys(fn($item) => ['to' => $item])
+            ->toArray();
     }
 }

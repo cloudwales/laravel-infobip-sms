@@ -1,12 +1,12 @@
 {
-    "name": "cloudwal/laravel-infobit-sms",
-    "description": "Sends SMS messages through the InfoBit System",
+    "name": "cloudwal/laravel-infobip-sms",
+    "description": "Sends SMS messages through the InfoBip System",
     "keywords": [
         "CloudWales",
         "laravel",
         "laravel-infobit-sms"
     ],
-    "homepage": "https://github.com/cloudwal/laravel-infobit-sms",
+    "homepage": "https://github.com/cloudwal/laravel-infobip-sms",
     "license": "MIT",
     "authors": [
         {
@@ -42,7 +42,7 @@
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-infobit-sms --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-infobip-sms --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -68,10 +68,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CloudWales\\LaravelInfobitSms\\LaravelInfobitSmsServiceProvider"
+                "CloudWales\\LaravelInfobipSms\\LaravelInfobipSmsServiceProvider"
             ],
             "aliases": {
-                "LaravelInfobitSms": "CloudWales\\LaravelInfobitSms\\Facades\\LaravelInfobitSms"
+                "LaravelInfobipSms": "CloudWales\\LaravelInfobipSms\\Facades\\LaravelInfobitSms"
             }
         }
     },

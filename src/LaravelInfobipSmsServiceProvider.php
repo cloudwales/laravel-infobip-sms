@@ -1,13 +1,13 @@
 <?php
 
-namespace CloudWales\LaravelInfobitSms;
+namespace CloudWales\LaravelInfobipSms;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CloudWales\LaravelInfobitSms\Commands\LaravelInfobitSmsCommand;
+use CloudWales\LaravelInfobitSms\Commands\LaravelInfobipSmsCommand;
 use Illuminate\Support\Facades\Http;
 
-class LaravelInfobitSmsServiceProvider extends PackageServiceProvider
+class LaravelInfobipSmsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -17,7 +17,7 @@ class LaravelInfobitSmsServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-infobit-sms')
+            ->name('laravel-infobip-sms')
             ->hasConfigFile();
     }
 }

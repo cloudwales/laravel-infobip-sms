@@ -5,12 +5,12 @@ namespace CloudWales\LaravelInfobitSms\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \CloudWales\LaravelInfobitSms\LaravelInfobitSms
+ * @see \CloudWales\LaravelInfobitSms\LaravelInfobipSms
  */
-class LaravelInfobitSms extends Facade
+class LaravelInfobipSms extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \CloudWales\LaravelInfobitSms\LaravelInfobitSms::class;
+        return \CloudWales\LaravelInfobipSms\LaravelInfobipSms::class;
     }
 }

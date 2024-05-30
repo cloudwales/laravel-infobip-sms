@@ -37,7 +37,7 @@ return [
 use CloudWales\LaravelInfobitSms\LaravelInfobipSms;
 
 $response = new LaravelInfobipSms();
-return $response->send('0123456789', 'Test message');
+return $response->send(['0123456789', '12345678901'], 'Test message');
 
 ```
 

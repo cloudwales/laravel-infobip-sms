@@ -21,12 +21,9 @@ class LaravelInfobipSms
 
     public function send($recipients, $message)
     {
-        $collection = $this->prepareNumbers($recipients);
+        $destinationsArray = $this->preparePhoneNumbers($recipients);
 
-        $response = Http::withBasicAuth(
-            $this->username,
-            $this->password
-        )
+        $response = Http::withBasicAuth($this->username, $this->password)
             ->withHeaders([
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json'
@@ -34,19 +31,18 @@ class LaravelInfobipSms
             ->post($this->url.'/sms/3/messages', [
                 "messages" => [
                     "sender" => $this->sender,
-                    "destinations" => $collection,
+                    "destinations" => $destinationsArray,
                     "content" => [
                         "text" => $message
                     ]
                 ]
             ]);
 
-        $response->throw();
 
         return $response->json();
     }
 
-    private function prepareNumbers($recipients): array
+    private function preparePhoneNumbers($recipients): array
     {
         return collect($recipients)
             ->mapWithKeys(fn($item) => ['to' => $item])

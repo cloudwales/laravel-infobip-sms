@@ -1,11 +1,9 @@
 # Sends SMS messages through the InfoBit System
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/cloudwal/laravel-infobit-sms.svg?style=flat-square)](https://packagist.org/packages/cloudwal/laravel-infobit-sms)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/cloudwal/laravel-infobit-sms/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/cloudwal/laravel-infobit-sms/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/cloudwal/laravel-infobit-sms/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/cloudwal/laravel-infobit-sms/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/cloudwal/laravel-infobit-sms.svg?
 [![Total Downloads](https://img.shields.io/packagist/dt/cloudwal/laravel-infobit-sms.svg?style=flat-square)](https://packagist.org/packages/cloudwal/laravel-infobit-sms)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This is a very simple package to send sms messages through the InfoBip API.
 
 ## Installation
 
@@ -25,14 +23,21 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'sender' => env('INFOBIP_SENDER', 'Laravel'),
+    'username' => env('INFOBIP_USERNAME', 'user'),
+    'password' => env('INFOBIP_PASSWORD', '123456'),
+    'url' => env('INFOBIP_URL', 'https://test.api.infobip.com'),
 ];
 ```
 
 ## Usage
 
 ```php
-$laravelInfobitSms = new CloudWales\LaravelInfobitSms();
-echo $laravelInfobitSms->echoPhrase('Hello, CloudWales!');
+use CloudWales\LaravelInfobitSms\LaravelInfobitSms;
+
+$response = new LaravelInfobitSms();
+return $response->send('0123456789', 'Test message');
+
 ```
 
 ## Testing

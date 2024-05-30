@@ -24,7 +24,6 @@ This is the contents of the published config file:
 
 ```php
 return [
-    'debug' => env('INFOBIP_DEBUG', false),
     'sender' => env('INFOBIP_SENDER', 'Laravel'),
     'username' => env('INFOBIP_USERNAME', 'user'),
     'password' => env('INFOBIP_PASSWORD', '123456'),

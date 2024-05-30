@@ -10,13 +10,15 @@ class LaravelInfobipSmsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('laravel-infobip-sms')
             ->hasConfigFile();
+    }
+
+    public function register(): void
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/infobip-sms.php', 'infobip-sms'
+        );
     }
 }

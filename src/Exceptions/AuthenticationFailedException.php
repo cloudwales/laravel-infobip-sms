@@ -4,8 +4,8 @@ namespace CloudWales\LaravelInfobipSms\Exceptions;
 
 class AuthenticationFailedException extends \Exception
 {
-    public static function unauthorisedUser()
+    public static function unauthorisedUser($description)
     {
-            return new self("User is not authenticated");
+            return new self($description);
     }
 }

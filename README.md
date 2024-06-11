@@ -25,9 +25,10 @@ This is the contents of the published config file:
 ```php
 return [
     'sender' => env('INFOBIP_SENDER', 'Laravel'),
+    'from' => env('INFOBIP_FROM_NUMBER', '0123456789'),
     'username' => env('INFOBIP_USERNAME', 'user'),
     'password' => env('INFOBIP_PASSWORD', '123456'),
-    'url' => env('INFOBIP_URL', 'https://test.api.infobip.com'),
+    'host' => env('INFOBIP_HOST', 'https://test.api.infobip.com'),
 ];
 ```
 
@@ -37,7 +38,12 @@ return [
 use CloudWales\LaravelInfobitSms\LaravelInfobipSms;
 
 $response = new LaravelInfobipSms();
-return $response->send(['0123456789', '12345678901'], 'Test message');
+
+// Send an SMS
+return $response->sendSms(['0123456789', '12345678901'], 'Test SMS message');
+
+// Send WhatsApp Message
+return $response->sendWhatsApp('0123456789', 'Test WhatsApp message');
 
 ```
 
@@ -48,9 +54,6 @@ composer test
 ```
 
 ## Upcoming
-
-To be added:
-- WhatsApp messaging
 
 
 ## Changelog

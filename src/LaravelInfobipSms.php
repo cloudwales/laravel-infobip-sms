@@ -9,15 +9,16 @@ use Illuminate\Support\Facades\Log;
 
 class LaravelInfobipSms
 {
-    private mixed $sender_name;
+    private mixed $from;
+    private mixed $sender;
     private mixed $username;
     private mixed $password;
     private mixed $host;
 
     public function __construct()
     {
-        $this->sender_name = config('infobip-sms.from_number');
-        $this->sender_name = config('infobip-sms.sender_');
+        $this->from = config('infobip-sms.from_number');
+        $this->sender = config('infobip-sms.sender');
         $this->username = config('infobip-sms.username');
         $this->password = config('infobip-sms.password');
         $this->host = config('infobip-sms.host');

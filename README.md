@@ -46,6 +46,9 @@ return $response->sendSms(['0123456789', '12345678901'], 'Test SMS message');
 // Send WhatsApp Message
 return $response->sendWhatsApp('0123456789', 'Test WhatsApp message');
 
+// Get the delivery report of the message
+return $response->getMessageReport($response['bulkId']);
+
 ```
 
 ## Testing

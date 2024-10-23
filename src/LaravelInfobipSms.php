@@ -24,11 +24,26 @@ class LaravelInfobipSms
         $this->host = config('infobip-sms.host');
     }
 
+
+    public function getMessageReport($bulkId)
+    {
+        $response = Http::withBasicAuth($this->username, $this->password)
+            ->withHeaders([
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json'
+            ])
+            ->get($this->host.'/sms/3/logs?bulkId=' . $bulkId);
+
+        $this->throwError($response);
+
+        return $response->json();
+    }
+
     /**
      * @throws AuthenticationFailedException
      * @throws ConnectionException
      */
-    public function sendSms($recipients, $message)
+    public function sendSms($recipients, $message,  $flash = false)
     {
         $destinationsArray = $this->preparePhoneNumbers($recipients);
 
@@ -43,6 +58,9 @@ class LaravelInfobipSms
                     "destinations" => $destinationsArray,
                     "content" => [
                         "text" => $message
+                    ],
+                    'options' => [
+                        'flash' => $flash
                     ]
                 ]
             ]);
